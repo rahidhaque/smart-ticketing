@@ -10,7 +10,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-        .font-raleway{
+        .font-raleway {
             font-family: "Raleway", sans-serif;
         }
     </style>
@@ -19,33 +19,49 @@
 <body class="font-raleway container mx-auto">
     <header>
         <!-- navbar starts  -->
-        <div class="navbar">
+        <div class="navbar mb-9">
             <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 font-medium">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
                 </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 font-medium">
-                  <li><a>Home</a></li>
-                  <li><a>About</a></li> 
-                  <li><a>Destination</a></li>
-                  <li><a>Search</a></li>
-                </ul>
-              </div>
-              <a class="btn btn-ghost text-3xl">P-Ticket</a>
+                <a class="btn btn-ghost text-3xl">P-Ticket</a>
             </div>
             <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1 font-medium">
-                <li><a>Home</a></li>
-                <li><a>About</a></li> 
-                <li><a>Destination</a></li>
-                <li><a>Search</a></li>
-              </ul>
+                <ul class="menu menu-horizontal px-1 font-medium">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                </ul>
             </div>
             <div class="navbar-end">
-              <span class="flex"><span class="text-[#1DD100] font-bold">Bus</span> <img class="ml-3" src="images/tabler-icon-bus.svg" alt=""></span>
+                <span class="flex"><span class="text-[#1DD100] font-bold">Bus</span> <img class="ml-3"
+                        src="images/tabler-icon-bus.svg" alt=""></span>
             </div>
-          </div>
+        </div>
+        <!-- banner section starts  -->
+        <div>
+            <div
+                class="bg-cover bg-center rounded-[32px] h-[550px] w-full bg-[url('images/banner.png')] text-white flex flex-col justify-center items-center space-y-4">
+
+                <h1 class="text-6xl text-center font-extrabold">End-to-End Travel with <br><span class="text-[#1DD100]">P Paribahan</span></h1>
+                <p class="pb-4 text-center w-[691px]">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+                <a class="bg-[#1DD100] px-8 py-5 font-bold text-[#030712] rounded-[32px]" href="">Buy Tickets</a>
+            </div>
+        </div>
     </header>
     <main>
 
