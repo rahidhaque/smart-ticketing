@@ -69,40 +69,89 @@
         <!-- best offers section  -->
         <section class="best-offers">
             <h2 class="text-4xl font-bold text-center mt-28 mb-10">Best Offers for you</h2>
-        <div class="flex justify-center items-center gap-6">
-            <div class="flex mb-14">
-                <div class="h-[220px] bg-[#FFBF0F] w-[285px] flex flex-col justify-center items-center space-y-2">
-                    <p class="text-3xl font-black">15% OFF</p>
-                    <p class="font-bold text-[20px]">on your next purchase</p>
-                    <span>use by January 2024</span>
+            <div class="flex flex-col lg:flex-row justify-center items-center gap-6">
+                <div class="flex mb-14">
+                    <div
+                        class="h-[220px] bg-[#FFBF0F] w-[285px] flex flex-col justify-center items-center space-y-2 mx-auto">
+                        <p class="text-3xl font-black">15% OFF</p>
+                        <p class="font-bold text-[20px]">on your next purchase</p>
+                        <span>use by January 2024</span>
+                    </div>
+                    <div>
+                        <img class="absolute" src="images/cupon-devider.png" alt="">
+                    </div>
+                    <div class="h-[220px] bg-[#FFBF0F] w-[240px] flex flex-col justify-center items-center space-y-2">
+                        <p class="text-2xl font-black">NEW15</p>
+                        <span>Coupon Code</span>
+                    </div>
                 </div>
-                <div>
-                    <img class="absolute" src="images/cupon-devider.png" alt="">
-                </div> 
-                <div class="h-[220px] bg-[#FFBF0F] w-[240px] flex flex-col justify-center items-center space-y-2">
-                    <p class="text-2xl font-black">NEW15</p>
-                    <span>Coupon Code</span>
+
+                <div class="flex mb-14">
+                    <div class="h-[220px] bg-[#F78C9C] w-[285px] flex flex-col justify-center items-center space-y-2">
+                        <p class="text-3xl font-black">20% OFF</p>
+                        <p class="font-bold text-[20px]">on your next purchase</p>
+                        <span>use by January 2024</span>
+                    </div>
+                    <div>
+                        <img class="absolute" src="images/cupon-devider.png" alt="">
+                    </div>
+                    <div class="h-[220px] bg-[#F78C9C] w-[240px] flex flex-col justify-center items-center space-y-2">
+                        <p class="text-2xl font-black">Couple 20</p>
+                        <span>Coupon Code</span>
+                    </div>
                 </div>
             </div>
-            
-            <div class="flex mb-14">
-                <div class="h-[220px] bg-[#F78C9C] w-[285px] flex flex-col justify-center items-center space-y-2">
-                    <p class="text-3xl font-black">20% OFF</p>
-                    <p class="font-bold text-[20px]">on your next purchase</p>
-                    <span>use by January 2024</span>
+            <div class="flex justify-center items-center">
+                <a class="bg-white border-2 px-8 py-5 font-bold text-[#1DD100] rounded-[12px]" href="">See All
+                    Offers</a>
+            </div>
+        </section>
+        <section id="ticket-details">
+            <h2 class="text-4xl font-bold text-center mt-28 mb-6">P.H Paribahan</h2>
+            <p class="text-center w-[736px] mx-auto">Yes, you can run unit tests and view the results directly within
+                the app. The integrated testing features allow for a streamlined .</p>
+            <div class="bus-info mt-11 mb-5 flex justify-around items-center">
+                <div class="bus-name-seats space-y-8">
+                    <div class="grid grid-cols-3 gap-x-60 gap-y-6">
+                        <div class="bus-name col-span-2">
+                            <div class="flex gap-4">
+                                <img src="images/bus-logo.png" alt="">
+                                <div>
+                                    <p class="text-3xl font-bold text-[#030712] mb-3">Sohag Paribahan</p>
+                                    <span class="text-[#03071299]">Coach-009-WEB ! AC_Business</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bus-seats">
+                            <img class="mr-2 inline" src="images/seat-green.png" alt="">
+                            <p id="seats" class="inline text-[#1DD100] font-medium">40 Seats left</p>
+                        </div>
+                    </div>
+                    <div class="bus-departure-details">
+                        <div class="flex justify-between mb-12">
+                            <p class="font-semibold text-[#03071299]">Route</p>
+                            <p class="font-semibold text-[#030712]">Dhaka - Rajsahi</p>
+                        </div>
+                        <div class="flex justify-between mb-12">
+                            <p class="font-semibold text-[#03071299]">Departure Time</p>
+                            <p class="font-semibold text-[#030712]">9:00 pm</p>
+                        </div>
+                        <div class="flex justify-between items-center mb-12">
+                            <p class="font-semibold text-[#030712CC]">Boarding Point - Laxmipur</p>
+                            <p class="font-semibold text-[#030712CC]">Dropping Point - Bogura</p>
+                            <p class="font-semibold text-[#030712CC]">Est. Time - 11 Hour</p>       
+                        </div>
+                    </div>             
                 </div>
                 <div>
-                    <img class="absolute" src="images/cupon-devider.png" alt="">
-                </div> 
-                <div class="h-[220px] bg-[#F78C9C] w-[240px] flex flex-col justify-center items-center space-y-2">
-                    <p class="text-2xl font-black">Couple 20</p>
-                    <span>Coupon Code</span>
+                    <img src="images/info-devider.png" alt="">
                 </div>
-            </div> 
-        </div>
-        <div class="flex justify-center items-center">
-            <a class="bg-white border-2 px-8 py-5 font-bold text-[#1DD100] rounded-[12px]" href="">See All Offers</a>
-        </div>
+                <div class="bus-fare space-y-6 text-center">
+                    <p class="flex justify-center"><img src="images/fare.png" alt=""></p>
+                    <p class="text-3xl font-bold text-[#030712]">550 Taka</p>
+                    <p class="text-2xl font-semibold">Per Seat</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
