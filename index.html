@@ -16,8 +16,8 @@
     </style>
 </head>
 
-<body class="font-raleway min-h-screen container mx-auto px-4">
-    <header>
+<body>
+    <header class="font-raleway min-h-screen container mx-auto px-4">
         <!-- navbar starts  -->
         <div class="navbar mb-9">
             <div class="navbar-start">
@@ -66,7 +66,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="font-raleway min-h-screen container mx-auto px-4">
         <!-- best offers section  -->
         <section class="best-offers">
             <h2 class="text-4xl font-bold text-center mt-28 mb-10">Best Offers for you</h2>
@@ -258,20 +258,24 @@
                     <div class="mt-4">
                         <!-- You can open the modal using ID.showModal() method -->
                         <!-- You can open the modal using ID.showModal() method -->
-                        <button disabled id="btn-modal-open" class="w-full bg-[#1DD100] px-7 py-5 text-white font-semibold rounded-2xl" onclick="my_modal_4.showModal()">Next</button>
+                        <button disabled id="btn-modal-open"
+                            class="w-full bg-[#1DD100] px-7 py-5 text-white font-semibold rounded-2xl"
+                            onclick="my_modal_4.showModal()">Next</button>
                         <dialog id="my_modal_4" class="modal">
                             <div class="modal-box w-11/12 max-w-5xl flex flex-col justify-center items-center">
                                 <div>
                                     <img src="images/success.png" alt="">
                                 </div>
                                 <h3 class="font-bold text-[#27AE60] text-2xl">Success</h3>
-                                <p class="py-4 w-[500px] text-center text-[#4A4A4A]">Thank you for Booking Our Bus Seats.
+                                <p class="py-4 w-[500px] text-center text-[#4A4A4A]">Thank you for Booking Our Bus
+                                    Seats.
                                     We are working hard to find the best service and deals for you.
                                 </p>
                                 <div class="modal-action">
                                     <form method="dialog">
                                         <!-- if there is a button, it will close the modal -->
-                                        <button  id="btn-modal-close" onClick="window.location.reload()" class="rounded-[32px] bg-[#27AE60] font-semibold text-white px-24 py-3" >Continue</button>
+                                        <button id="btn-modal-close" onClick="window.location.reload()"
+                                            class="rounded-[32px] bg-[#27AE60] font-semibold text-white px-24 py-3">Continue</button>
                                     </form>
                                 </div>
                             </div>
@@ -282,8 +286,30 @@
             </div>
         </section>
     </main>
-    <footer>
-
+    <footer class="px-32 py-28 bg-[#030712] text-white max-w-full">
+        <div class="flex justify-between items-center mb-12">
+            <div class="space-y-4">
+                <h1 class="text-3xl font-extrabold">P-Ticket</h1>
+                <p>P-Ticket is a digital platform to make your daily commuting better.</p>
+            </div>
+            <div class="space-y-4">
+                <h2 class="font-semibold text-[20px]">Download our app</h2>
+                <img src="images/Group 104.svg" alt="">
+            </div>
+        </div>
+        <div class="mb-8">
+            <img class="w-full" src="images/Line 1.png" alt="">
+        </div>
+        <div class="flex justify-between items-center">
+            <div>
+                <p>&copy; All Rights Reserved, RH-Ticket services Limited 2024</p>
+            </div>
+            <div class="space-x-2">
+                <a href="">Terms & Conditions</a>
+                <a href="">Return & refund policy</a>
+                <a href="">Privacy policy</a>
+            </div>
+        </div>
     </footer>
     <script src="scripts/utility.js"></script>
     <script src="scripts/smart-ticket.js"></script>
