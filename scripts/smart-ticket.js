@@ -1,24 +1,29 @@
 let selectedSeats = [];
 let selectedSeatsCount= 0;
 function handleGetTicketId(event){
+    //added to prevent the same id to be selected twice
     event.stopPropagation();
+
+    //select seat
     if (event.target.tagName === 'BUTTON') {
         const buttonId = event.target.id;
-        setBackgroundColor(buttonId);
 
-        
+        //selected seat change color
+
+       //prevent user from selecting same seat 
         if (selectedSeats.includes(buttonId)) {
             alert(`Seat of id ${buttonId} is already selected`);
             return;
         }
 
-
-        if(selectedSeatsCount<3){
+        //prevent user from selecting more than 4 seats
+        if(selectedSeatsCount<4){
             selectedSeatsCount++;
+            setBackgroundColor(buttonId);
             selectedSeats.push(buttonId);
         }
 
-        else{
+        if(selectedSeatsCount===4){
             alert("Maximum Sit Limit Reached");
             return;
         }
