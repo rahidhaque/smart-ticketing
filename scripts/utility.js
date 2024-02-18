@@ -3,6 +3,11 @@ function getElement(elementId){
     return element;
 }
 
+function getElementTagNameCollection(tagName){
+    const elementCollection= document.getElementsByTagName(tagName);
+    return elementCollection;
+}
+
 function setBackgroundColor(elementId){
     const element= document.getElementById(elementId);
     element.classList.add('bg-[#1DD100]');

@@ -1,6 +1,7 @@
 let selectedSeats = [];
 let selectedSeatsCount = 0;
 let totalSeatsLeft = getElementValueFromText('total-seats');
+let totalPrice = 0;
 
 function handleGetTicketId(event) {
     //added to prevent the same id to be selected twice
@@ -14,7 +15,7 @@ function handleGetTicketId(event) {
 
         //prevent user from selecting same seat 
         if (selectedSeats.includes(buttonId)) {
-            alert(`Seat of id ${buttonId} is already selected`); 
+            alert(`Seat of id ${buttonId} is already selected`);
             return;
         }
 
@@ -22,20 +23,25 @@ function handleGetTicketId(event) {
         if (selectedSeatsCount < 4) {
             selectedSeatsCount++;
             totalSeatsLeft--;
-            const seatsBody= document.getElementById('table-body');
-            const seatsTr= document.createElement('tr');
-            const seatsTd1= document.createElement('td');
+            const seatsBody = document.getElementById('table-body');
+            const seatsTr = document.createElement('tr');
+            const seatsTd1 = document.createElement('td');
 
-            seatsTd1.innerText= buttonId;
+            seatsTd1.innerText = buttonId;
             seatsTr.appendChild(seatsTd1);
-            const seatsTd2= document.createElement('td');
-            seatsTd2.innerText= 'Economy';
+            const seatsTd2 = document.createElement('td');
+            seatsTd2.innerText = 'Economy';
             seatsTr.appendChild(seatsTd2);
-            const seatsTd3= document.createElement('td');
-            seatsTd3.innerText= '550';
+            const seatsTd3 = document.createElement('td');
+            seatsTd3.innerText = '550';
+            seatsTd3.setAttribute('id', 'seat-price');
             seatsTr.appendChild(seatsTd3);
             seatsBody.appendChild(seatsTr);
-            
+
+            const priceValue = getElementValueFromText('seat-price');
+            totalPrice = priceValue + totalPrice;
+            setElementValueToText('total-seat-price', totalPrice);
+
             setElementValueToText('total-seats', totalSeatsLeft);
             setElementValueToText('selected-seats-count', selectedSeatsCount);
             setBackgroundColor(buttonId);
@@ -50,8 +56,3 @@ function handleGetTicketId(event) {
 }
 
 document.addEventListener('click', handleGetTicketId);
-
-function addSeats(){
-    const seatsTr= document.createElement('tr');
-
-}
