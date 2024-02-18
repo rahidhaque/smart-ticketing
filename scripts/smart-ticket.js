@@ -3,9 +3,15 @@ let selectedSeatsCount = 0;
 let totalSeatsLeft = getElementValueFromText('total-seats');
 let totalPrice = 0;
 
+
 function handleGetTicketId(event) {
     //added to prevent the same id to be selected twice
     event.stopPropagation();
+
+    if (event.target.id === 'apply-coupon') {
+        applyCoupon();
+        return;
+    }
 
     //select seat
     if (event.target.tagName === 'BUTTON') {
@@ -23,10 +29,16 @@ function handleGetTicketId(event) {
         if (selectedSeatsCount < 4) {
             selectedSeatsCount++;
             totalSeatsLeft--;
+            setElementValueToText('total-seats', totalSeatsLeft);
+            setElementValueToText('selected-seats-count', selectedSeatsCount);
+            setBackgroundColor(buttonId);
+            selectedSeats.push(buttonId);
+
+            //new element created and append child to table body
             const seatsBody = document.getElementById('table-body');
             const seatsTr = document.createElement('tr');
-            const seatsTd1 = document.createElement('td');
 
+            const seatsTd1 = document.createElement('td');
             seatsTd1.innerText = buttonId;
             seatsTr.appendChild(seatsTd1);
             const seatsTd2 = document.createElement('td');
@@ -38,17 +50,17 @@ function handleGetTicketId(event) {
             seatsTr.appendChild(seatsTd3);
             seatsBody.appendChild(seatsTr);
 
+
+            //total Price
             const priceValue = getElementValueFromText('seat-price');
             totalPrice = priceValue + totalPrice;
             setElementValueToText('total-seat-price', totalPrice);
-
-            setElementValueToText('total-seats', totalSeatsLeft);
-            setElementValueToText('selected-seats-count', selectedSeatsCount);
-            setBackgroundColor(buttonId);
-            selectedSeats.push(buttonId);
+            setElementValueToText('grand-total-seat-price', totalPrice);
         }
 
         if (selectedSeatsCount === 4) {
+            const element = document.getElementById('apply-coupon');
+            element.removeAttribute('disabled');
             alert("Maximum Sit Limit Reached");
             return;
         }
@@ -56,3 +68,32 @@ function handleGetTicketId(event) {
 }
 
 document.addEventListener('click', handleGetTicketId);
+
+
+function applyCoupon() {
+    event.stopPropagation();
+    const totalSeatPrice = getElementValueFromText('total-seat-price');
+    const couponCode = getInputFieldText('coupon-field');
+    if (couponCode === 'NEW15' || couponCode === 'Couple 20') {
+        hideElement('coupon-div');
+        showElement('discount-div');
+        if (couponCode === 'NEW15') {
+            const discount = totalSeatPrice * 0.15;
+            setElementValueToText('discounted-seat-price', discount);
+            const discountedPrice = totalSeatPrice - discount;
+            setElementValueToText('grand-total-seat-price', discountedPrice);
+        }
+
+        if (couponCode === 'Couple 20') {
+            const discount = totalSeatPrice * 0.20;
+            setElementValueToText('discounted-seat-price', discount);
+            const discountedPrice = totalSeatPrice - discount;
+            setElementValueToText('grand-total-seat-price', discountedPrice);
+        }
+    }
+    else {
+        alert("Please Write the Correct Coupon Code");
+        return;
+    }
+}
+

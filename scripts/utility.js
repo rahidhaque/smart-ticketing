@@ -19,8 +19,26 @@ function getElementValueFromText(elementId){
     return elementValue; 
 }
 
+function getInputFieldText(inputField){
+    const inputFieldText= document.getElementById(inputField);
+    const inputValueText= inputFieldText.value;
+    return inputValueText;
+}
+
+
 function setElementValueToText(elementId, value){
     const element= document.getElementById(elementId);
     element.innerText=value;
 }
+
+function hideElement(elementName){
+    const elementSection= document.getElementById(elementName);
+    elementSection.classList.add('hidden');
+}
+
+function showElement(elementName){
+    const elementSection= document.getElementById(elementName);
+    elementSection.classList.remove('hidden');
+}
+
 

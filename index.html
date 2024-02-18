@@ -231,7 +231,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="table-body">
-                                
+
                                 </tbody>
                             </table>
                             <div class="flex justify-between mt-4">
@@ -239,6 +239,18 @@
                                 <p class="text-[#030712] font-bold">BDT <span id="total-seat-price">0</span></p>
                             </div>
                         </div>
+                    </div>
+                    <div id="coupon-div" class="flex justify-center items-center gap-6">
+                        <input id="coupon-field" type="text" placeholder="Have Any Coupon?" class="input input-bordered w-full max-w-xs" />
+                        <button disabled class="rounded-lg px-5 py-2 bg-[#1DD100] text-white font-semibold" onclick="applyCoupon()" id="apply-coupon">Apply</button>
+                    </div>
+                    <div id="discount-div" class="hidden flex justify-between mt-4">
+                        <p class="text-[#030712] font-bold">Discount Total</p>
+                        <p class="text-[#030712] font-bold">BDT <span id="discounted-seat-price">0</span></p>
+                    </div>
+                    <div id="grand-total-div" class="flex justify-between mt-4">
+                        <p class="text-[#030712] font-bold">Grand Total</p>
+                        <p class="text-[#030712] font-bold">BDT <span id="grand-total-seat-price">0</span></p>
                     </div>
                 </div>
             </div>
