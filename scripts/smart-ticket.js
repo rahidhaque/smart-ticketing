@@ -1,6 +1,7 @@
 function handleGetTicketId(event){
     if (event.target.tagName === 'BUTTON') {
-        
+        const buttonId = event.target.id;
+        setBackgroundColor(buttonId);
     }
 }
 
