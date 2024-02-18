@@ -13,9 +13,17 @@ function handleGetTicketId(event) {
         return;
     }
 
+    if (event.target.id === 'btn-modal-open'){
+        return;
+    }
+    if (event.target.id === 'btn-modal-close'){
+        return;
+    }
+
     //select seat
     if (event.target.tagName === 'BUTTON') {
         const buttonId = event.target.id;
+
 
         //selected seat change color
 
@@ -24,6 +32,7 @@ function handleGetTicketId(event) {
             alert(`Seat of id ${buttonId} is already selected`);
             return;
         }
+
 
         //prevent user from selecting more than 4 seats
         if (selectedSeatsCount < 4) {
@@ -59,11 +68,18 @@ function handleGetTicketId(event) {
         }
 
         if (selectedSeatsCount === 4) {
-            const element = document.getElementById('apply-coupon');
-            element.removeAttribute('disabled');
+            const elementCoupon = document.getElementById('apply-coupon');
+            elementCoupon.removeAttribute('disabled');
             alert("Maximum Sit Limit Reached");
             return;
         }
+
+        if(selectedSeatsCount>0){
+            const elementModal= document.getElementById('btn-modal-open');
+            elementModal.removeAttribute('disabled',true);
+            return;
+        }
+
     }
 }
 
