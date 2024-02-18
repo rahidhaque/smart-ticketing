@@ -61,7 +61,8 @@
                         class="text-[#1DD100]">P Paribahan</span></h1>
                 <p class="pb-4 text-center w-[691px]">Yes, you can run unit tests and view the results directly within
                     the app. The integrated testing features allow for a streamlined .</p>
-                <a  class="bg-[#1DD100] px-8 py-5 font-bold text-[#030712] rounded-[32px]" href="#ticket-details">Buy Tickets</a>
+                <a class="bg-[#1DD100] px-8 py-5 font-bold text-[#030712] rounded-[32px]" href="#ticket-details">Buy
+                    Tickets</a>
             </div>
         </div>
     </header>
@@ -139,9 +140,9 @@
                         <div class="flex justify-between items-center mb-12">
                             <p class="font-semibold text-[#030712CC]">Boarding Point - Laxmipur</p>
                             <p class="font-semibold text-[#030712CC]">Dropping Point - Bogura</p>
-                            <p class="font-semibold text-[#030712CC]">Est. Time - 11 Hour</p>       
+                            <p class="font-semibold text-[#030712CC]">Est. Time - 11 Hour</p>
                         </div>
-                    </div>             
+                    </div>
                 </div>
                 <div>
                     <img src="images/info-devider.png" alt="">
@@ -153,7 +154,7 @@
                 </div>
             </div>
             <!-- sit info & pricing starts  -->
-            <div id="sit-pricing-info" class="flex gap-8">   
+            <div id="sit-pricing-info" class="flex gap-8">
                 <div id="sit-info" class="mt-14 mb-28">
                     <div>
                         <p class="font-semibold text-2xl">Select Your Seat</p>
@@ -171,30 +172,36 @@
                         </div>
                     </div>
                     <div class="mt-12 flex justify-end">
-                            <img class="mr-8" src="images/tabler-icon-steering-wheel.svg" alt="">
+                        <img class="mr-8" src="images/tabler-icon-steering-wheel.svg" alt="">
                     </div>
                     <div class="grid grid-cols-5 gap-6 items-center mt-12">
-                            <p>A</p>
+                        <p>A</p>
                         <div>
-                            <button onclick="handleGetTicketId(event)" id="A1" class="rounded-xl px-11 py-4 font-medium text-[#03071280]">A1</button>
+                            <button onclick="handleGetTicketId(event)" id="A1"
+                                class="rounded-xl px-11 py-4 font-medium text-[#03071280]">A1</button>
                         </div>
                         <div>
-                            <button onclick="handleGetTicketId(event)" id="A2" class="rounded-xl px-11 py-4 font-medium text-[#03071280]">A2</button>
+                            <button onclick="handleGetTicketId(event)" id="A2"
+                                class="rounded-xl px-11 py-4 font-medium text-[#03071280]">A2</button>
                         </div>
                         <div>
-                            <button onclick="handleGetTicketId(event)" id="A3" class="rounded-xl px-11 py-4 font-medium text-[#03071280]">A3</button>
+                            <button onclick="handleGetTicketId(event)" id="A3"
+                                class="rounded-xl px-11 py-4 font-medium text-[#03071280]">A3</button>
                         </div>
                         <div>
-                            <button onclick="handleGetTicketId(event)" id="A4" class="rounded-xl px-11 py-4 font-medium text-[#03071280]">A4</button>
+                            <button onclick="handleGetTicketId(event)" id="A4"
+                                class="rounded-xl px-11 py-4 font-medium text-[#03071280]">A4</button>
                         </div>
                     </div>
                     <div class="grid grid-cols-5 gap-6 items-center mt-12">
-                            <p>B</p>
+                        <p>B</p>
                         <div>
-                            <button onclick="handleGetTicketId(event)" id="B1" class="rounded-xl px-11 py-4 font-medium text-[#03071280]">B1</button>
+                            <button onclick="handleGetTicketId(event)" id="B1"
+                                class="rounded-xl px-11 py-4 font-medium text-[#03071280]">B1</button>
                         </div>
                         <div>
-                            <button onclick="handleGetTicketId(event)" id="B2" class="rounded-xl px-11 py-4 font-medium text-[#03071280]">B2</button>
+                            <button onclick="handleGetTicketId(event)" id="B2"
+                                class="rounded-xl px-11 py-4 font-medium text-[#03071280]">B2</button>
                         </div>
                         <div>
                             <button id="B3" class="rounded-xl px-11 py-4 font-medium text-[#03071280]">B3</button>
@@ -207,31 +214,36 @@
                 <div class="seat-pricing-info-divider">
                     <img class="min-h-screen h-full" src="images/info-devider.png" alt="">
                 </div>
-                <div id="pricing-info" class="mt-14 mb-28"> 
+                <div id="pricing-info" class="mt-14 mb-28">
                     <div class="mb-20">
                         <p class="font-semibold text-2xl">Select Your Seat</p>
                     </div>
                     <div>
                         <div class="overflow-x-auto">
                             <table class="table">
-                              <!-- head -->
-                              <thead>
-                                <tr>
-                                  <th class="text-[#030712] font-bold">Seat <span class="rounded-lg p-2 text-white bg-[#1DD100]">0</span></th>
-                                  <th class="text-[#030712] font-bold">Class</th>
-                                  <th class="text-[#030712] font-bold">Price</th>
-                                </tr>
-                              </thead>
-                              <tbody id="table-body">
-                                <!-- row 1 -->
-                                <tr id="table-row">
-                                  <td>Cy Ganderton</td>
-                                  <td>Quality Control Specialist</td>
-                                  <td>Blue</td>
-                                </tr>
-                              </tbody>
+                                <!-- head -->
+                                <thead>
+                                    <tr>
+                                        <th class="text-[#030712] font-bold">Seat <span id="selected-seats-count"
+                                                class="rounded-lg p-2 text-white bg-[#1DD100]">0</span></th>
+                                        <th class="text-[#030712] font-bold">Class</th>
+                                        <th class="text-[#030712] font-bold">Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-body">
+                                    <!-- row starts  -->
+                                    <tr>
+                                        <td>C2</td>
+                                        <td>Economy</td>
+                                        <td>550</td>
+                                    </tr>
+                                </tbody>
                             </table>
-                          </div>
+                            <div class="flex justify-between mt-4">
+                                <p class="text-[#030712] font-bold">Total Price</p>
+                                <p class="text-[#030712] font-bold">BDT <span id="grand-total">0</span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

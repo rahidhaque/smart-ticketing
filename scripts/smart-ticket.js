@@ -14,7 +14,7 @@ function handleGetTicketId(event) {
 
         //prevent user from selecting same seat 
         if (selectedSeats.includes(buttonId)) {
-            alert(`Seat of id ${buttonId} is already selected`);
+            alert(`Seat of id ${buttonId} is already selected`); 
             return;
         }
 
@@ -23,6 +23,7 @@ function handleGetTicketId(event) {
             selectedSeatsCount++;
             totalSeatsLeft--;
             setElementValueToText('total-seats', totalSeatsLeft);
+            setElementValueToText('selected-seats-count', selectedSeatsCount);
             setBackgroundColor(buttonId);
             selectedSeats.push(buttonId);
         }
