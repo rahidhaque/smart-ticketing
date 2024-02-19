@@ -59,7 +59,7 @@
 
                 <h1 class="text-6xl text-center font-extrabold">End-to-End Travel with <br><span
                         class="text-[#1DD100]">RH Paribahan</span></h1>
-                <p class="pb-4 text-center w-[691px] font-semibold">If you need extra comfort on a long journey, then RH Paribahan is there with lavish seats and a hassle free bus environment. You can easily buy your travel tickets below by just clicking the buy tickets button to get started. You can easily choose your favorite seats and your suitable time and fare for the ticket is 550 BDT per person.</p>
+                <p class="pb-4 text-center w-[500px] lg:w-[691px] font-semibold">If you need extra comfort on a long journey, then RH Paribahan is there with lavish seats and a hassle free bus environment. You can easily buy your travel tickets below by just clicking the buy tickets button to get started. You can easily choose your favorite seats and your suitable time and fare for the ticket is 550 BDT per person.</p>
                 <a class="bg-[#1DD100] px-8 py-5 font-bold text-[#030712] rounded-[32px]" href="#ticket-details">Buy
                     Tickets</a>
             </div>
@@ -70,14 +70,14 @@
         <section class="best-offers">
             <h2 class="text-4xl font-bold text-center mt-28 mb-10">Best Offers for you</h2>
             <div class="flex flex-col lg:flex-row justify-center items-center gap-6">
-                <div class="flex mb-14">
+                <div class="flex flex-col lg:flex-row mb-14">
                     <div
                         class="h-[220px] bg-[#FFBF0F] w-[285px] flex flex-col justify-center items-center space-y-2 mx-auto">
                         <p class="text-3xl font-black">15% OFF</p>
                         <p class="font-bold text-[20px]">on your next purchase</p>
                         <span>use by January 2024</span>
                     </div>
-                    <div>
+                    <div class="hidden lg:block">
                         <img class="absolute" src="images/cupon-devider.png" alt="">
                     </div>
                     <div class="h-[220px] bg-[#FFBF0F] w-[240px] flex flex-col justify-center items-center space-y-2">
@@ -92,7 +92,7 @@
                         <p class="font-bold text-[20px]">on your next purchase</p>
                         <span>use by January 2024</span>
                     </div>
-                    <div>
+                    <div class="hidden lg:block">
                         <img class="absolute" src="images/cupon-devider.png" alt="">
                     </div>
                     <div class="h-[220px] bg-[#F78C9C] w-[240px] flex flex-col justify-center items-center space-y-2">
@@ -108,8 +108,8 @@
         </section>
         <section id="ticket-details">
             <h2 class="text-4xl font-bold text-center mt-28 mb-6">R.H. Paribahan</h2>
-            <p class="text-center w-[736px] mx-auto">You can buy the tickets below from any position but beware you can buy 4 maximum seats. Let's get started.</p>
-            <div class="bus-info mt-11 mb-5 flex justify-around items-center">
+            <p class="text-center w-[510px] lg:w-[736px] mx-auto">You can buy the tickets below from any position but beware you can buy 4 maximum seats. Let's get started.</p>
+            <div class="bus-info mt-11 mb-5 flex flex-col lg:flex-row justify-around items-center">
                 <div class="bus-name-seats space-y-8">
                     <div class="grid grid-cols-3 gap-x-60 gap-y-6">
                         <div class="bus-name col-span-2">
@@ -142,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="hidden lg:block">
                     <img src="images/info-devider.png" alt="">
                 </div>
                 <div class="bus-fare space-y-6 text-center">
@@ -152,7 +152,7 @@
                 </div>
             </div>
             <!-- sit info & pricing starts  -->
-            <div id="sit-pricing-info" class="flex gap-8">
+            <div id="sit-pricing-info" class="flex flex-col lg:flex-row gap-8">
                 <div id="sit-info" class="mt-14 mb-28">
                     <div>
                         <p class="font-semibold text-2xl">Select Your Seat</p>
@@ -209,7 +209,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="seat-pricing-info-divider">
+                <div class="seat-pricing-info-divider hidden lg:block">
                     <img class="min-h-screen h-full" src="images/info-devider.png" alt="">
                 </div>
                 <div id="pricing-info" class="mt-14 mb-28">
@@ -285,7 +285,7 @@
         </section>
     </main>
     <footer class="px-32 py-28 bg-[#030712] text-white max-w-full">
-        <div class="flex justify-between items-center mb-12">
+        <div class="flex flex-col lg:flex-row space-y-4 justify-between items-center mb-12">
             <div class="space-y-4">
                 <h1 class="text-3xl font-extrabold">RH-ticket</h1>
                 <p class="w-[374px]">RH-ticket is a digital platform which makes your life better by purchasing hassle free tickets.</p>
@@ -298,7 +298,7 @@
         <div class="mb-8">
             <img class="w-full" src="images/Line 1.png" alt="">
         </div>
-        <div class="flex justify-between items-center">
+        <div class="flex flex-col lg:flex-row space-y-2 justify-between items-center">
             <div>
                 <p>&copy; All Rights Reserved, RH-Ticket services Limited 2024</p>
             </div>
