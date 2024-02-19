@@ -108,11 +108,11 @@
         </section>
         <section id="ticket-details">
             <h2 class="text-4xl font-bold text-center mt-28 mb-6">R.H. Paribahan</h2>
-            <p class="text-center w-[510px] lg:w-[736px] mx-auto">You can buy the tickets below from any position but beware you can buy 4 maximum seats. Let's get started.</p>
+            <p class="text-center w-[350px] lg:w-[736px] mx-auto">You can buy the tickets below from any position but beware you can buy 4 maximum seats. Let's get started.</p>
             <div class="bus-info mt-11 mb-5 flex flex-col lg:flex-row justify-around items-center">
                 <div class="bus-name-seats space-y-8">
-                    <div class="grid grid-cols-3 gap-x-60 gap-y-6">
-                        <div class="bus-name col-span-2">
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-60 gap-y-6">
+                        <div class="bus-name col-span-1 lg:col-span-2">
                             <div class="flex gap-4">
                                 <img src="images/bus-logo.png" alt="">
                                 <div>
@@ -127,15 +127,15 @@
                         </div>
                     </div>
                     <div class="bus-departure-details">
-                        <div class="flex justify-between mb-12">
+                        <div class="flex flex-col md:flex-row lg:flex-row justify-between mb-12">
                             <p class="font-semibold text-[#03071299]">Route</p>
                             <p class="font-semibold text-[#030712]">Dhaka - Sylhet</p>
                         </div>
-                        <div class="flex justify-between mb-12">
+                        <div class="flex flex-col md:flex-row lg:flex-row justify-between mb-12">
                             <p class="font-semibold text-[#03071299]">Departure Time</p>
                             <p class="font-semibold text-[#030712]">9:00 pm</p>
                         </div>
-                        <div class="flex justify-between items-center mb-12">
+                        <div class="flex flex-col md:flex-row lg:flex-row justify-between items-center mb-12">
                             <p class="font-semibold text-[#030712CC]">Boarding Point - Laxmipur</p>
                             <p class="font-semibold text-[#030712CC]">Dropping Point - Bogura</p>
                             <p class="font-semibold text-[#030712CC]">Est. Time - 11 Hour</p>
@@ -158,13 +158,13 @@
                         <p class="font-semibold text-2xl">Select Your Seat</p>
                     </div>
                     <div class="mt-10">
-                        <div class="flex justify-between gap-x-60 gap-y-6">
+                        <div class="flex flex-col lg:flex-row justify-between gap-x-60 gap-y-6">
                             <div class="bus-seats">
-                                <img class="mr-2 inline" src="images/seat-gray.png" alt="">
+                                <img class="mr-0 lg:mr-2 inline" src="images/seat-gray.png" alt="">
                                 <p id="seats" class="inline text-[#03071280] font-medium">Available</p>
                             </div>
                             <div class="bus-seats">
-                                <img class="mr-2 inline" src="images/seat-green-filled.png" alt="">
+                                <img class="mr-0 lg:mr-2 inline" src="images/seat-green-filled.png" alt="">
                                 <p id="seats" class="inline text-[#1DD100] font-medium">Selected</p>
                             </div>
                         </div>
@@ -172,7 +172,7 @@
                     <div class="mt-12 flex justify-end">
                         <img class="mr-8" src="images/tabler-icon-steering-wheel.svg" alt="">
                     </div>
-                    <div class="grid grid-cols-5 gap-6 items-center mt-12">
+                    <div class="grid grid-cols-4 lg:grid-cols-5 gap-6 items-center mt-12">
                         <p>A</p>
                         <div>
                             <button onclick="handleGetTicketId(event)" id="A1"
@@ -191,7 +191,7 @@
                                 class="rounded-xl px-11 py-4 font-medium text-[#03071280]">A4</button>
                         </div>
                     </div>
-                    <div class="grid grid-cols-5 gap-6 items-center mt-12">
+                    <div class="grid grid-cols-4 lg:grid-cols-5 gap-6 items-center mt-12">
                         <p>B</p>
                         <div>
                             <button onclick="handleGetTicketId(event)" id="B1"
@@ -284,7 +284,7 @@
             </div>
         </section>
     </main>
-    <footer class="px-32 py-28 bg-[#030712] text-white max-w-full">
+    <footer class="p-2 lg:px-32 lg:py-28 bg-[#030712] text-white max-w-full">
         <div class="flex flex-col lg:flex-row space-y-4 justify-between items-center mb-12">
             <div class="space-y-4">
                 <h1 class="text-3xl font-extrabold">RH-ticket</h1>
